@@ -21,3 +21,8 @@ This webserver application will return the last NDAYS closing stock results and 
 5. From within the cloned repository dirctory, deploy the application using the following Ansible-playbook command, please note the APIKEY is encrypt and therefore the playbook will ask for a 'Vault Password':
 
   `# ansible-playbook webserver-deployment-playbook.yml --ask-vault-pass`
+  
+
+If an Ansible deployment is not appropriate or possible, a Kubernetes manifests is also included and can be deployed using the following command. **Please note that you'll need to replace the secret key APIKEY's value with your own APIKEY.**
+
+`# kubectl create -f webserver-deployment.yml
