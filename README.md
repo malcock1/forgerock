@@ -6,7 +6,7 @@ This webserver application will return the last NDAYS closing stock results and 
 
 ## How to deploy
 
-1. Ensure Ansible is installed on the deployment machine. you can following the installation instructions for your Operating system https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html
+1. Ensure Ansible is installed on the deployment machine. You can following the installation instructions for your Operating system [here](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html)
 2. Ensure the following Python dependencies are met by running the following command:
   `# pip install openshift PyYAML`
 3. Clone this repository
