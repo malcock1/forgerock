@@ -8,7 +8,7 @@
   become: no
   vars:
     deployment_state: present
-    namespace: default
+    namespace: techtest
     symbol: "MSFT"
     ndays: 7
     apikey: !vault |
