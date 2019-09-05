@@ -4,6 +4,8 @@
 
 This webserver application will return the last NDAYS closing stock results and an average of those results for a given stock SYMBOL upon receiving a HTTP GET request.
 
+The application container image can be found on DockerHub [here](https://hub.docker.com/r/malcock/webserver)
+
 ## How to deploy
 
 ### Ansible deployment
