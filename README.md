@@ -8,11 +8,13 @@ The application container image can be found on DockerHub [here](https://hub.doc
 
 ## How to deploy
 
+These deployment instructions assume that you have a worksation which has valid connection to a running Kubernetes cluster and that you have the correct permissions to deploy into the cluster.
+
 ### Ansible deployment
 
 1. Ensure Python is installed on the deployment machine, details of installing Python can be found [here](https://www.python.org/downloads/)
 
-2. Ensure Pip is installed on the deployment machine, details of how to install for you Operating system can be found [here](https://packaging.python.org/guides/installing-using-linux-tools/#installing-pip-setuptools-wheel-with-linux-package-managers)
+2. Ensure Pip is installed on the deployment machine, details of how to install for your Operating system can be found [here](https://packaging.python.org/guides/installing-using-linux-tools/#installing-pip-setuptools-wheel-with-linux-package-managers)
 
 2. Ensure Ansible is installed on the deployment machine. You can following the installation instructions for your Operating system [here](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html)
 
@@ -24,7 +26,7 @@ The application container image can be found on DockerHub [here](https://hub.doc
 
   `# git clone https://github.com/malcock1/forgerock.git`
   
-5. From within the cloned repository dirctory, deploy the application using the following Ansible-playbook command, please note the APIKEY is encrypt and therefore the playbook will ask for a 'Vault Password':
+5. From within the cloned repository directory, deploy the application using the following Ansible-playbook command, please note the APIKEY is encrypted and therefore the playbook will ask for a 'Vault Password':
 
   `# ansible-playbook webserver-deployment-playbook.yml --ask-vault-pass`
   
@@ -42,6 +44,6 @@ Example of these variables are:
   
 ### Kubectl deployment
 
-If an Ansible deployment is not appropriate or possible, a Kubernetes manifests is also included and can be deployed using the following command. **Please note that you'll need to replace APIKEY value with your own key. please search for the string _!! Removed !!_ to find the location.**
+If an Ansible deployment is not appropriate or possible, a Kubernetes manifest is also included and can be deployed using the following command. **Please note that you'll need to replace APIKEY value with your own key. Please search for the string _!! Removed !!_ to find the location.**
 
 `# kubectl create -f webserver-deployment.yml`
