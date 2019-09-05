@@ -26,6 +26,6 @@ This webserver application will return the last NDAYS closing stock results and 
   
 ### Kubectl deployment
 
-If an Ansible deployment is not appropriate or possible, a Kubernetes manifests is also included and can be deployed using the following command. **Please note that you'll need to replace the secret key APIKEY's value with your own APIKEY.**
+If an Ansible deployment is not appropriate or possible, a Kubernetes manifests is also included and can be deployed using the following command. **Please note that you'll need to replace APIKEY value with your own key. please search for the string _!! Removed !!_ to find the location.**
 
 `# kubectl create -f webserver-deployment.yml
