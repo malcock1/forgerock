@@ -11,6 +11,7 @@ This webserver application will return the last NDAYS closing stock results and 
 2. Ensure the following Python dependencies are met by running the following command:
 
   `# pip install openshift PyYAML`
+  
 3. Clone this repository
 
   `# git clone https://github.com/malcock1/forgerock.git`
