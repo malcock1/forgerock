@@ -12,6 +12,8 @@ The application container image can be found on DockerHub [here](https://hub.doc
 
 1. Ensure Python is installed on the deployment machine, details of installing Python can be found [here](https://www.python.org/downloads/)
 
+2. Ensure Pip is installed on the deployment machine, details of how to install for you Operating system can be found [here](https://packaging.python.org/guides/installing-using-linux-tools/#installing-pip-setuptools-wheel-with-linux-package-managers)
+
 2. Ensure Ansible is installed on the deployment machine. You can following the installation instructions for your Operating system [here](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html)
 
 3. Ensure the following Python dependencies are met by running the following command:
