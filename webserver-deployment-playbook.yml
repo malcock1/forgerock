@@ -8,7 +8,7 @@
   become: no
   vars:
     deployment_state: present
-    namespace: techtest
+    namespace: default
     symbol: "MSFT"
     ndays: 7
     apikey: !vault |
@@ -20,7 +20,7 @@
           33306433333064653238303635633366646233343536366333643263326339313363
 
   tasks:   
-  - name: "Ensure namespace {{ namespace }} exists"
+  - name: "Ensure namespace {{ namespace }} is {{ deployment_state }}"
     k8s:
       state: "{{ deployment_state }}"
       definition:
@@ -30,7 +30,7 @@
           name: "{{ namespace }}"
     when: namespace != "default"
 
-  - name: Ensure the ConfigMap is deployed
+  - name: "Ensure the ConfigMap is deployment is {{ deployment_state }}"
     k8s:
       state: "{{ deployment_state }}"
       definition:
@@ -43,7 +43,7 @@
           SYMBOL: "{{ symbol }}"
           NDAYS: "{{ ndays|int }}"
 
-  - name: Ensure the Secret is deployed
+  - name: "Ensure the Secret is deployment is {{ deployment_state }}"
     k8s:
       state: "{{ deployment_state }}"
       definition:
@@ -56,7 +56,7 @@
         data:
           APIKEY: "{{ apikey }}"
 
-  - name: Ensure the app is deployed
+  - name: "Ensure the app is deployment is {{ deployment_state }}"
     k8s:
       state: "{{ deployment_state }}"
       definition:
@@ -114,7 +114,7 @@
               securityContext: {}
               terminationGracePeriodSeconds: 30
 
-  - name: Ensure the app service is deployed
+  - name: "Ensure the app service is deployment is {{ deployment_state }}"
     k8s:
       state: "{{ deployment_state }}"
       definition:
@@ -131,7 +131,7 @@
               port: 80
               targetPort: 8000
 
-  - name: Ensure the app ingress is deployed
+  - name: "Ensure the app ingress is deployment is {{ deployment_state }}"
     k8s:
       state: "{{ deployment_state }}"
       definition:
