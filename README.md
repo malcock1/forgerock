@@ -28,6 +28,18 @@ The application container image can be found on DockerHub [here](https://hub.doc
 
   `# ansible-playbook webserver-deployment-playbook.yml --ask-vault-pass`
   
+#### Customizing Ansible deployment
+
+You can change the way the application is deployed and configured by changing the variables in the Ansible playbook (webserver-deployment-playbook.yml)
+
+Example of these variables are:
+
+    deployment_state: present
+    namespace: techtest
+    symbol: "MSFT"
+    ndays: 7
+    apikey: _Ansible vault encrypted value_
+  
 ### Kubectl deployment
 
 If an Ansible deployment is not appropriate or possible, a Kubernetes manifests is also included and can be deployed using the following command. **Please note that you'll need to replace APIKEY value with your own key. please search for the string _!! Removed !!_ to find the location.**
