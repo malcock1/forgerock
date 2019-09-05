@@ -6,6 +6,8 @@ This webserver application will return the last NDAYS closing stock results and 
 
 ## How to deploy
 
+### Ansible deployment
+
 1. Ensure Python is installed on the deployment machine, details of installing Python can be found [here](https://www.python.org/downloads/)
 
 2. Ensure Ansible is installed on the deployment machine. You can following the installation instructions for your Operating system [here](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html)
@@ -22,6 +24,7 @@ This webserver application will return the last NDAYS closing stock results and 
 
   `# ansible-playbook webserver-deployment-playbook.yml --ask-vault-pass`
   
+### Kubectl deployment
 
 If an Ansible deployment is not appropriate or possible, a Kubernetes manifests is also included and can be deployed using the following command. **Please note that you'll need to replace the secret key APIKEY's value with your own APIKEY.**
 
