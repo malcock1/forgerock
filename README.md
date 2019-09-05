@@ -8,7 +8,7 @@ The application container image can be found on DockerHub [here](https://hub.doc
 
 ## How to deploy
 
-These deployment instructions assume that you have a worksation which has valid connection to a running Kubernetes cluster and that you have the correct permissions to deploy into the cluster.
+These deployment instructions assume that you have a workstation which has valid connection to a running Kubernetes cluster and that you have the correct permissions to deploy into the cluster.
 
 ### Ansible deployment
 
