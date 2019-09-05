@@ -34,7 +34,7 @@ You can change the way the application is deployed and configured by changing th
 
 Example of these variables are:
 
-    deployment_state: present
+    deployment_state: present|absent
     namespace: techtest
     symbol: "MSFT"
     ndays: 7
